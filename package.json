@@ -12,14 +12,11 @@
   },
   "devDependencies": {
     "browser-sync": "2.26.14",
-    "eslint": "^8.23.0",
-    "eslint-config-htmlacademy": "2.0.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.5",
-    "eslint-plugin-promise": "^6.0.1"
+    "eslint": "7.18.0",
+    "eslint-config-htmlacademy": "2.0.0"
   },
   "license": "MIT",
+  "dependencies": {},
   "scripts": {
     "start": "browser-sync start --server --no-ui --files \"js/**/*.js\"",
     "test": "eslint js/"
