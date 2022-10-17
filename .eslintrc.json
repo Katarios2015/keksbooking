@@ -27,11 +27,14 @@
             "error",
             "always"
         ]
-    },
-    "eslint.enable": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.options": {
-       "configFile": "/Users/АлексКейт/Desktop/Кексобукинг/.eslintrc.json"
     }
+    /*"eslint.enable": true,*/
+    /*"source.fixAll.eslint": true,*/
+    /*"editor.codeActionsOnSave": {
+      "source.fixAll": true
+  },*/
+    /*"eslint.options": {
+       "configFile": "/Users/АлексКейт/Desktop/Кексобукинг/.eslintrc.json"
+    }*/
 
 }
