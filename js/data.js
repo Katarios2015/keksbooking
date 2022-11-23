@@ -1,5 +1,6 @@
+import {getRandomArrayElement, getRandomArray} from "./util.js";
 /*генерация объектов из массивов*/
-const OBJ_COUNT = 10;
+const OBJ_COUNT = 1;
 const TITLES = [
     "Квартира",
     "Замок",
@@ -39,8 +40,6 @@ const PHOTOS = [
     "http://o0.github.io/assets/images/tokyo/hotel3.jpg"
 ];
 
-console.log(PHOTOS.length);
-
 const ROOMS =  new Array(OBJ_COUNT).fill(null).map(() => {
     // eslint-disable-next-line no-undef
     return _.random(1, 5);
@@ -64,27 +63,6 @@ const FEATURESMASS = [
     "elevator",
     "conditioner"
 ];
-
-function getRandomArrayElement(elements) {
-    // eslint-disable-next-line no-undef
-    return elements[_.random(0, elements.length - 1)];
-}
-
-
-let accumlator = 0;
-
-
-const getRandomArray = (someArray) => {
-    // eslint-disable-next-line no-undef
-    const randArrayLength = _.random(0, someArray.length-1);
-    let newMass = [];
-
-    for(let i = 0; i<= randArrayLength; i++) {
-        accumlator =+ i;
-        newMass[i] = someArray[accumlator];
-    }
-    return newMass;
-};
 
 const PRICES = new Array(OBJ_COUNT).fill(null).map(() => {
     // eslint-disable-next-line no-undef
@@ -146,8 +124,10 @@ const createBookingObject = () => {
             y: _.random(139.70000, 139.80000)
         }
     };
+
 };
 
 
-const BOOCKINGS = new Array(OBJ_COUNT).fill(null).map(() => createBookingObject());
-console.log (BOOCKINGS);
+const Boockings = new Array(OBJ_COUNT).fill(null).map(() => createBookingObject());
+console.log(Boockings);
+export {Boockings};
