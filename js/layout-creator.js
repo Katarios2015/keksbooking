@@ -1,11 +1,10 @@
-import { Boockings } from "./data.js";
+/*import { Boockings } from "./data.js";
 
 
-const cardTemplatePopup = document.querySelector("#card")
-    .content
-    .querySelector(".popup");
+
 const mapCanvas = document.querySelector("#map-canvas");
 const cardFragment = document.createDocumentFragment();
+
 
 Boockings.forEach(({ offer, author }) => {
     const cardClone = cardTemplatePopup.cloneNode(true);
@@ -40,3 +39,5 @@ Boockings.forEach(({ offer, author }) => {
 });
 
 mapCanvas.appendChild(cardFragment);
+
+export{cardTemplatePopup};*/
