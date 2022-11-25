@@ -57,6 +57,7 @@ const map = L.map(mapCanvas)
         lng: 139.753927,
     }, 10);
 
+// eslint-disable-next-line no-undef
 L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {
@@ -64,6 +65,7 @@ L.tileLayer(
     },
 ).addTo(map);
 
+// eslint-disable-next-line no-undef
 const mainMarkerIcon = L.icon({
     iconUrl: "./leaflet/img/main-pin.svg",
     iconSize: [52, 52],
