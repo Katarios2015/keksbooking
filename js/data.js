@@ -1,6 +1,6 @@
 import {getRandomArrayElement, getRandomArray} from "./util.js";
 /*генерация объектов из массивов*/
-const OBJ_COUNT = 1;
+const OBJ_COUNT = 5;
 const TITLES = [
     "Квартира",
     "Замок",
@@ -118,15 +118,13 @@ const createBookingObject = () => {
             photo: getRandomArray(PHOTOS)
         },
         location: {
-            // eslint-disable-next-line no-undef
-            x: _.random(35.65000, 35.70000),
-            // eslint-disable-next-line no-undef
-            y: _.random(139.70000, 139.80000)
+            lat: _.random(35.65000, 35.70000),
+            lng: _.random(139.70000, 139.80000)
         }
     };
 
 };
-
+console.log(createBookingObject());
 
 const Boockings = new Array(OBJ_COUNT).fill(null).map(() => createBookingObject());
 console.log(Boockings);
