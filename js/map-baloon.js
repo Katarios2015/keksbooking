@@ -1,5 +1,4 @@
 import { Boockings } from "./data.js";
-import { cardTemplatePopup} from "./layout-creator.js";
 
 const adForm = document.querySelector(".ad-form");
 adForm.classList.add("ad-form--disabled");
@@ -38,6 +37,7 @@ const removeDisable = (unit) => {
 
 
 
+// eslint-disable-next-line no-undef
 const map = L.map(mapCanvas)
     .on("load", () => {
         const coordCenter = {
@@ -70,6 +70,7 @@ const mainMarkerIcon = L.icon({
     iconAnchor: [26, 52],
 });
 
+// eslint-disable-next-line no-undef
 const mainMarker = L.marker(
     {
         lat: 35.681729,
@@ -86,6 +87,10 @@ mainMarker.on("moveend", (evt) => {
     const coord = evt.target.getLatLng();
     InputAddress.value =  parseFloat(coord.lat.toFixed(5)) + ", " + parseFloat(coord.lng.toFixed(5));
 });
+
+const cardTemplatePopup = document.querySelector("#card")
+    .content
+    .querySelector(".popup");
 
 const createCard = (offer,author) => {
 
@@ -174,11 +179,13 @@ const createCard = (offer,author) => {
 
 Boockings.forEach(({location, offer, author}) => {
     const {lat, lng} = location;
+    // eslint-disable-next-line no-undef
     const markerIcon = L.icon({
         iconUrl: "./leaflet/img/pin.svg",
         iconSize: [40, 40],
         iconAnchor: [20, 40],
     });
+    // eslint-disable-next-line no-undef
     const marker = L.marker(
         {
             lat,

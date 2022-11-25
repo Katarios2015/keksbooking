@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import {getRandomArrayElement, getRandomArray} from "./util.js";
 /*генерация объектов из массивов*/
 const OBJ_COUNT = 5;

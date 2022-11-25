@@ -1,14 +1,12 @@
-import { Boockings } from "./data.js";
+/*import { Boockings } from "./data.js";
 
 
-const cardTemplatePopup = document.querySelector("#card")
-    .content
-    .querySelector(".popup");
+
 const mapCanvas = document.querySelector("#map-canvas");
 const cardFragment = document.createDocumentFragment();
 
 
-/*Boockings.forEach(({ offer, author }) => {
+Boockings.forEach(({ offer, author }) => {
     const cardClone = cardTemplatePopup.cloneNode(true);
     cardClone.querySelector(".popup__title").textContent = offer.title;
     cardClone.querySelector(".popup__text--address").textContent = offer.address;
@@ -40,6 +38,6 @@ const cardFragment = document.createDocumentFragment();
     cardFragment.appendChild(cardClone);
 });
 
-mapCanvas.appendChild(cardFragment);*/
+mapCanvas.appendChild(cardFragment);
 
-export{cardTemplatePopup};
+export{cardTemplatePopup};*/
