@@ -1,18 +1,14 @@
-const MAXPRICE = 1000000;
 const rentType = document.querySelector("#type");
 const rentPrice = document.querySelector("#price");
 
 const rentCheckout = document.querySelector("#timein");
 const rentCheckin = document.querySelector("#timeout");
 
-rentPrice.max = MAXPRICE;
-rentPrice.step = 100;
-
-rentPrice.addEventListener("input", function() {
+/*rentPrice.addEventListener("input", function() {
     if(rentPrice.value > MAXPRICE) {
         rentPrice.value = rentPrice.max;
     }
-});
+});*/
 
 
 rentType.addEventListener("change", function () {
@@ -43,3 +39,5 @@ rentCheckout.addEventListener("change", function () {
 rentCheckin.addEventListener("change", function () {
     rentCheckout.value = this.value;
 });
+
+export {rentPrice};
