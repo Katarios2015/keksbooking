@@ -204,3 +204,4 @@ Boockings.forEach(({location, offer, author}) => {
     );
 });
 
+export{adForm};
