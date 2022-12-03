@@ -1,4 +1,4 @@
-import { Boockings } from "./data.js";
+/*import { Boockings } from "./data.js";*/
 
 const adForm = document.querySelector(".ad-form");
 adForm.classList.add("ad-form--disabled");
@@ -94,7 +94,7 @@ const cardTemplatePopup = document.querySelector("#card")
     .content
     .querySelector(".popup");
 
-const createCard = (offer,author) => {
+const createCard = (offer, author) => {
 
     const cardClone = cardTemplatePopup.cloneNode(true);
 
@@ -118,12 +118,12 @@ const createCard = (offer,author) => {
         cardClone.querySelector(".popup__text--price").classList.remove("hidden");
         cardClone.querySelector(".popup__text--price").textContent = offer.price + " ₽";
     }
-    if(offer.room==="" && offer.guest==="") {
+    if(offer.room==="" && offer.guests==="") {
         cardClone.querySelector(".popup__text--capacity").classList.add("hidden");
     } else {
         cardClone.querySelector(".popup__text--capacity").classList.remove("hidden");
         cardClone.querySelector(".popup__text--capacity").textContent =
-    offer.room + " комнаты" + " " + " для" + " " + offer.guest + " гостей";
+    offer.rooms + " комнаты" + " " + " для" + " " + offer.guests + " гостей";
     }
     if(offer.checkin==="" && offer.checkout==="") {
         cardClone.querySelector(".popup__text--time").classList.add("hidden");
@@ -134,7 +134,7 @@ const createCard = (offer,author) => {
 
     }
 
-    if(offer.features.length === 0 || offer.features.length === 1 && offer.features[0] === "") {
+    if(offer.features === [""]) {
         cardClone.querySelector(".popup__features").classList.add("hidden");
     } else {
         cardClone.querySelector(".popup__features").classList.remove("hidden");
@@ -179,29 +179,36 @@ const createCard = (offer,author) => {
 
 };
 
-Boockings.forEach(({location, offer, author}) => {
-    const {lat, lng} = location;
-    // eslint-disable-next-line no-undef
-    const markerIcon = L.icon({
-        iconUrl: "./leaflet/img/pin.svg",
-        iconSize: [40, 40],
-        iconAnchor: [20, 40],
-    });
-    // eslint-disable-next-line no-undef
-    const marker = L.marker(
-        {
-            lat,
-            lng,
-        },
-        {
-            icon: markerIcon,
-        },
-    );
+const renderFlatList = (Boockings) => {
+    Boockings.forEach(({location, offer, author}) => {
+        const {lat, lng} = location;
+        // eslint-disable-next-line no-undef
+        const markerIcon = L.icon({
+            iconUrl: "./leaflet/img/pin.svg",
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+        });
+        // eslint-disable-next-line no-undef
+        const marker = L.marker(
+            {
+                lat,
+                lng,
+            },
+            {
+                icon: markerIcon,
+            },
+        );
 
-    marker.addTo(map);
-    marker.bindPopup(
-        createCard(offer, author),
-    );
-});
+        marker.addTo(map);
+        marker.bindPopup(
+            createCard(offer, author),
+        );
+    });
+};
+
+
+
 
 export{adForm};
+export{renderFlatList};
+
