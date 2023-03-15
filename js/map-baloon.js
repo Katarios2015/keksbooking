@@ -1,5 +1,3 @@
-import {map} from "./activate-page.js";
-
 const cardTemplatePopup = document.querySelector("#card")
     .content
     .querySelector(".popup");
@@ -91,7 +89,7 @@ const createCard = (offer, author) => {
 let markers = L.layerGroup();
 
 
-const renderFlatList = (Boockings) => {
+/*const renderFlatList = (Boockings) => {
     Boockings.forEach(({location, offer, author}) => {
         const {lat, lng} = location;
         // eslint-disable-next-line no-undef
@@ -116,9 +114,9 @@ const renderFlatList = (Boockings) => {
             createCard(offer, author),
         );
 
-        /*markers.addTo(map);*/
+        markers.addTo(map);
 
     });
-};
+};*/
 
 export{markers, createCard};
