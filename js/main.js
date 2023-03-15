@@ -11,6 +11,7 @@ import  {renderSimilarBookingList, houseTypeChange, housePriceChange, houseRooms
     from "./map-filters.js";
 
 import {getData} from "./fetch.js";
+import "./upload-photo.js";
 
 const RERENDER_DELAY = 500;
 
