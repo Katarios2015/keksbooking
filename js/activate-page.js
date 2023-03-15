@@ -31,7 +31,7 @@ makeDisable(inputUploadAvatar);
 // eslint-disable-next-line no-undef
 const map = L.map(mapCanvas)
     .on("load", () => {
-        coordCenter ;
+        coordCenter;
         InputAddress.value =  parseFloat(coordCenter.lat.toFixed(5)) + ", " + parseFloat(coordCenter.lng.toFixed(5));
         adForm.classList.remove("ad-form--disabled");
         mapFiltersForm.classList.remove("map__filters--disabled");
