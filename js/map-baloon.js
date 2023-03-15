@@ -26,7 +26,7 @@ const createCard = (offer, author) => {
         cardClone.querySelector(".popup__text--price").classList.remove("hidden");
         cardClone.querySelector(".popup__text--price").textContent = offer.price + " ₽";
     }
-    if(offer.room === "" && offer.guests==="") {
+    if(offer.rooms === "" && offer.guests==="") {
         cardClone.querySelector(".popup__text--capacity").classList.add("hidden");
     } else {
         cardClone.querySelector(".popup__text--capacity").classList.remove("hidden");
@@ -87,6 +87,10 @@ const createCard = (offer, author) => {
 
 };
 
+// eslint-disable-next-line no-undef
+let markers = L.layerGroup();
+
+
 const renderFlatList = (Boockings) => {
     Boockings.forEach(({location, offer, author}) => {
         const {lat, lng} = location;
@@ -107,15 +111,14 @@ const renderFlatList = (Boockings) => {
             },
         );
 
-        marker.addTo(map);
+        markers.addLayer(marker);
         marker.bindPopup(
             createCard(offer, author),
         );
+
+        /*markers.addTo(map);*/
+
     });
 };
 
-
-
-
-export{renderFlatList};
-
+export{markers, createCard};

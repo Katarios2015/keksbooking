@@ -125,8 +125,8 @@ const createBookingObject = () => {
     };
 
 };
-console.log(createBookingObject());
+/*console.log(createBookingObject());*/
 
 const Boockings = new Array(OBJ_COUNT).fill(null).map(() => createBookingObject());
-console.log(Boockings);
+/*console.log(Boockings);*/
 export {Boockings};
