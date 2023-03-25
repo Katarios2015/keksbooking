@@ -1,5 +1,4 @@
 // eslint-disable-next-line no-unused-vars
-/* global _:readonly */
 import "./util.js";
 import "./data.js";
 import "./auto-change-input.js";
